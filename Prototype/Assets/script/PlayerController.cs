@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,6 +6,7 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -47,8 +49,8 @@ public class PlayerController : MonoBehaviour
 
      void footstep()
      {
-      
-         if(_isGrounded && audioPlayer.isPlaying == false && _body.velocity.magnitude > 0)
+      Debug.Log(_body.velocity.magnitude);
+         if(_isGrounded && audioPlayer.isPlaying == false && _body.velocity.magnitude == 0)
          {
              audioPlayer.volume = Random.Range(.8f, 1f);
              audioPlayer.pitch = Random.Range(.9f, 1f);
