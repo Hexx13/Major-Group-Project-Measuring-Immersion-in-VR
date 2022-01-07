@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    public int sceneNumber;
      void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Tele")
+        if (collision.gameObject.tag == "Plaer")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(sceneNumber);
         }
         
     }

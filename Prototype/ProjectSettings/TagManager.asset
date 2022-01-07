@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - Tele
+  - Prop
+  - Plaer
   layers:
   - Default
   - TransparentFX
