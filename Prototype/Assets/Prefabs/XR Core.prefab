@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6341450118934854607}
   m_Layer: 0
   m_Name: XR Core
-  m_TagString: Untagged
+  m_TagString: Plaer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 4888337498724724675}
   m_Layer: 0
   m_Name: XR Origin
-  m_TagString: Untagged
+  m_TagString: Plaer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
