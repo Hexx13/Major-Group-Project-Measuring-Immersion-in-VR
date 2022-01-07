@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour
      {
          if (collision.gameObject.tag == "Floor")
              _isGrounded = true;
+
+        if (collision.gameObject.tag=="Prop")
+        Physics.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider>());     
      }
 
     private void OnJump(InputAction.CallbackContext obj)
