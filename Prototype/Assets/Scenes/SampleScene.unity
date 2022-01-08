@@ -1085,6 +1085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Core
       objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724685, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 2.2222222e+20
+      objectReference: {fileID: 0}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _xrOrigin = GetComponent<XROrigin>();
+        _collider = GetComponent<CapsuleCollider>();
         _body = GetComponent<Rigidbody>();
         jumpActionReference.action.performed += OnJump;
        
