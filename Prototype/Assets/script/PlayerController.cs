@@ -14,13 +14,13 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private InputActionReference jumpActionReference;
     [SerializeField] private float jumpForce = 500;
-
     private XROrigin _xrOrigin;
     private CapsuleCollider _collider;
     private Rigidbody _body;
     public AudioSource audioPlayer;
     private bool _isGrounded=true;
-    
+
+    public Rigidbody boby;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        footstep();
+        Debug.Log(boby.velocity.magnitude);
+        //footstep();
         var center = _xrOrigin.CameraInOriginSpacePos;
         _collider.center = new Vector3(center.x, _collider.center.y, center.z);
         _collider.height = _xrOrigin.CameraInOriginSpaceHeight;
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
      void footstep()
      {
+         
+         
       Debug.Log(_body.velocity.magnitude);
          if(_isGrounded && audioPlayer.isPlaying == false && _body.velocity.magnitude == 0)
          {
