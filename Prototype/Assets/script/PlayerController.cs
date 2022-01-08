@@ -19,11 +19,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _body;
     public AudioSource audioPlayer;
     private bool _isGrounded=true;
-
+ 
     public Rigidbody boby;
+
+    private Vector3 lastPos;
     // Start is called before the first frame update
     void Start()
     {
+        lastPos = boby.transform.position;
         _xrOrigin = GetComponent<XROrigin>();
         _collider = GetComponent<CapsuleCollider>();
         _body = GetComponent<Rigidbody>();
@@ -34,8 +37,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(boby.velocity.magnitude);
-        //footstep();
+        
+        footstep();
         var center = _xrOrigin.CameraInOriginSpacePos;
         _collider.center = new Vector3(center.x, _collider.center.y, center.z);
         _collider.height = _xrOrigin.CameraInOriginSpaceHeight;
@@ -50,12 +53,19 @@ public class PlayerController : MonoBehaviour
         Physics.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider>());     
      }
 
+     Boolean isMoving()
+     {
+         Boolean _isMoving = (boby.transform.position != lastPos);
+         lastPos = boby.transform.position;
+         return _isMoving;
+     }
+
      void footstep()
      {
          
          
-      Debug.Log(_body.velocity.magnitude);
-         if(_isGrounded && audioPlayer.isPlaying == false && _body.velocity.magnitude == 0)
+     
+         if(_isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              audioPlayer.volume = Random.Range(.8f, 1f);
              audioPlayer.pitch = Random.Range(.9f, 1f);
