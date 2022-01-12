@@ -725,15 +725,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4189356517337531857, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.006
+      value: 0.244
       objectReference: {fileID: 0}
     - target: {fileID: 4189356517337531857, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.211
+      value: 0.205
       objectReference: {fileID: 0}
     - target: {fileID: 5885934071009421394, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5885934071009421394, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_LocalScale.x
@@ -793,13 +793,24 @@ PrefabInstance:
         and interact with objects on the floor give it a go!
 
 
-        After you
-        have done that please visit the other testing areas by going through the
-        portals.'
+        You can do
+        this by using the trigger button where your index finger lays.
+
+
+        After
+        you have done that please visit the other testing areas by going through
+        the portals.
+
+
+        You are alble to walk by using the joystick on your
+        left controller.
+
+        You are able to turn around by using the joystick
+        on the right controller.'
       objectReference: {fileID: 0}
     - target: {fileID: 8479082759016358449, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_fontSize
-      value: 1.304
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8479082759016358449, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_margin.y
@@ -807,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8479082759016358449, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
       propertyPath: m_fontSizeBase
-      value: 1.304
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73032dbf050ee924aa5c20d5b14c8dd2, type: 3}
@@ -5212,7 +5223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4209922899059506469, guid: b538b989a2a135e41b18a21ed2147576, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4209922899059506469, guid: b538b989a2a135e41b18a21ed2147576, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5847,7 +5858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8605083746900616696, guid: 56630eace64eee54abd5a78e2e321b50, type: 3}
       propertyPath: sceneNumber
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8878578552189617913, guid: 56630eace64eee54abd5a78e2e321b50, type: 3}
       propertyPath: m_Enabled
@@ -7447,7 +7458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Realistic Area
+  m_text: High Poly Area
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7569,7 +7580,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575156685}
   m_LocalRotation: {x: -0, y: 0.6406453, z: -0, w: 0.767837}
-  m_LocalPosition: {x: 0, y: 0, z: -7.42}
+  m_LocalPosition: {x: 0, y: 0, z: -7.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7578,7 +7589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 79.68, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.878, y: 0.6}
+  m_AnchoredPosition: {x: 6.76, y: 0.6}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1592294822
@@ -9171,7 +9182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Horror Section
+  m_text: Locked Level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10084,7 +10095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8605083746900616696, guid: 56630eace64eee54abd5a78e2e321b50, type: 3}
       propertyPath: sceneNumber
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8878578552189617913, guid: 56630eace64eee54abd5a78e2e321b50, type: 3}
       propertyPath: m_Enabled
