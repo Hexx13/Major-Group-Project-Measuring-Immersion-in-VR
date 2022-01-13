@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         _collider.height = _xrOrigin.CameraInOriginSpaceHeight;
     }
 
+    
      void OnCollisionEnter(Collision collision)
      {
          if (collision.gameObject.tag == "Floor")
@@ -54,6 +55,8 @@ public class PlayerController : MonoBehaviour
         Physics.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider>());     
      }
 
+
+    //Function to check if the player is moving by comparing its current position to its last position
      Boolean isMoving()
      {
          Boolean _isMoving = (boby.transform.position != lastPos);
@@ -61,13 +64,14 @@ public class PlayerController : MonoBehaviour
          return _isMoving;
      }
 
+
+    //Plays footstep whenever the player moves
      void footstep()
      {
-         
-         
-     
+         //makes sure player is on the ground, step sound isnt playing and player is moving.
          if(_isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
+             //play sound
              audioPlayer.volume = Random.Range(.8f, 1f);
              audioPlayer.pitch = Random.Range(.9f, 1f);
              audioPlayer.Play();
@@ -76,8 +80,10 @@ public class PlayerController : MonoBehaviour
 
      }
 
+    //changes the global variablere _isGrounded to false and makes the player physically jump
      private void OnJump(InputAction.CallbackContext obj)
     {
+        //makes sure the player is grounded.
         if (!_isGrounded) return;
         _body.AddForce(Vector3.up * jumpForce);
         _isGrounded = false;
