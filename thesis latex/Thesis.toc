@@ -1,0 +1,36 @@
+\contentsline {chapter}{Declaration of Authorship}{i}{dummy.1}%
+\vspace {1em}
+\contentsline {chapter}{Abstract}{ii}{dummy.2}%
+\vspace {1em}
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.4}%
+\contentsline {chapter}{\numberline {2}Background and Motivation}{2}{chapter.5}%
+\contentsline {chapter}{\numberline {3}Aims and Objectives of this Project}{3}{chapter.6}%
+\contentsline {subsection}{\numberline {3.0.1}Immersion in virtual reality environments }{3}{subsection.7}%
+\contentsline {subsection}{\numberline {3.0.2}Accessibility in virtual reality}{3}{subsection.8}%
+\contentsline {subsection}{\numberline {3.0.3}Making the project testable}{4}{subsection.9}%
+\contentsline {subsection}{\numberline {3.0.4}Risk analysis}{4}{subsection.10}%
+\contentsline {chapter}{\numberline {4}Literature Review}{6}{chapter.11}%
+\contentsline {section}{\numberline {4.1}Immersion}{6}{section.12}%
+\contentsline {subsection}{\numberline {4.1.1}Immersion VIA Interaction}{6}{subsection.13}%
+\contentsline {subsection}{\numberline {4.1.2}Immersion VIA Sound}{7}{subsection.14}%
+\contentsline {subsection}{\numberline {4.1.3}Immersion VIA Perspective}{7}{subsection.15}%
+\contentsline {section}{\numberline {4.2}Accessibility}{8}{section.16}%
+\contentsline {section}{\numberline {4.3}Motion sickness}{9}{section.17}%
+\contentsline {chapter}{\numberline {5}Implementation}{10}{chapter.18}%
+\contentsline {subsection}{\numberline {5.0.1}Prototype Development Proposal}{10}{subsection.19}%
+\contentsline {chapter}{\numberline {6}Requirements analysis and feasibility}{12}{chapter.20}%
+\contentsline {chapter}{\numberline {7}Methodology}{14}{chapter.21}%
+\contentsline {subsection}{\numberline {7.0.1}Interaction}{15}{subsection.22}%
+\contentsline {subsection}{\numberline {7.0.2}User Testing and Data Processing}{16}{subsection.23}%
+\contentsline {chapter}{\numberline {8}Groupware Tools}{17}{chapter.24}%
+\contentsline {section}{\numberline {8.1}Collaborative Writing Tools}{17}{section.25}%
+\contentsline {section}{\numberline {8.2}Project Management Software}{17}{section.26}%
+\contentsline {subsection}{\numberline {8.2.1}Trello}{17}{subsection.27}%
+\contentsline {subsection}{\numberline {8.2.2}Miro}{18}{subsection.28}%
+\contentsline {chapter}{\numberline {9}Project Interface And Design}{19}{chapter.29}%
+\contentsline {chapter}{\numberline {10}Conclusion and future work}{20}{chapter.30}%
+\vspace {2em}
+\contentsline {chapter}{\numberline {A}References}{21}{appendix.31}%
+\contentsline {chapter}{\numberline {B}Table of figures}{22}{appendix.32}%
+\vspace {2em}
