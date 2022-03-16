@@ -12,6 +12,7 @@
       <Path>Library/PackageCache/com.unity.inputsystem@1.2.0</Path>
       <Path>Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0</Path>
       <Path>Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1</Path>
+      <Path>Library/PackageCache/com.unity.postprocessing@3.2.0</Path>
       <Path>Library/PackageCache/com.unity.services.core@1.0.1</Path>
       <Path>Library/PackageCache/com.unity.settings-manager@1.0.3</Path>
       <Path>Library/PackageCache/com.unity.subsystemregistration@1.1.0</Path>
@@ -34,6 +35,7 @@
       <Path>.vscode</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>

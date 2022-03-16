@@ -17,8 +17,12 @@ public class PlayerController : MonoBehaviour
     private XROrigin _xrOrigin;
     private CapsuleCollider _collider;
     private Rigidbody _body;
+    public AudioClip[] footsteps;
     public AudioSource audioPlayer;
     private bool _isGrounded=true;
+    private bool _onGrass = false;
+    private bool _onCement = false;
+    private bool _onMud = false;
  
     public Rigidbody boby;
 
@@ -48,8 +52,31 @@ public class PlayerController : MonoBehaviour
     
      void OnCollisionEnter(Collision collision)
      {
-         if (collision.gameObject.tag == "Floor")
+         
+          if (collision.gameObject.tag == "Grass")
+         {
+             _onGrass = true;
              _isGrounded = true;
+
+             _onMud = false;
+             _onCement = false;
+         }
+         else if (collision.gameObject.tag == "Mud")
+         {
+             _onMud = true;
+             _isGrounded = true;
+
+             _onGrass = false;
+             _onCement = false;
+         }
+         else if (collision.gameObject.tag == "Cement")
+         {
+             _onCement = true;
+             _isGrounded = true;
+
+             _onGrass = false;
+             _onMud = false;
+         }
 
          if (collision.gameObject.tag=="Prop")
         Physics.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider>());     
@@ -69,12 +96,25 @@ public class PlayerController : MonoBehaviour
      void footstep()
      {
          //makes sure player is on the ground, step sound isnt playing and player is moving.
-         if(_isGrounded && audioPlayer.isPlaying == false && isMoving())
+         if(_onCement && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              //play sound
-             audioPlayer.volume = Random.Range(.8f, 1f);
-             audioPlayer.pitch = Random.Range(.9f, 1f);
-             audioPlayer.Play();
+             audioPlayer.volume = Random.Range(.5f, 1f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
+             
+             audioPlayer.PlayOneShot(footsteps[2]);
+         }
+         else if (_onGrass && _isGrounded && audioPlayer.isPlaying == false && isMoving())
+         {
+             audioPlayer.volume = Random.Range(.5f, 1f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
+             audioPlayer.PlayOneShot(footsteps[1]);
+         }
+         else if (_onMud && _isGrounded && audioPlayer.isPlaying == false && isMoving())
+         {
+             audioPlayer.volume = Random.Range(.5f, 1f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
+             audioPlayer.PlayOneShot(footsteps[0]);
          }
 
 

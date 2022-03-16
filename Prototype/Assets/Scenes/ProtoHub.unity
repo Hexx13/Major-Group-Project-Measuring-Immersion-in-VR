@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38479948, g: 0.4721464, b: 0.61834335, a: 1}
+  m_IndirectSpecularColor: {r: 0.3851593, g: 0.4724939, b: 0.6185859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4511,9 +4511,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 288776829794771897, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1546802043515124690, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_Name
       value: XR Core
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b3e115a70f349541b0d8575ed8ccf78, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e199d30629395b43a1662a0c12cc8fe, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 07316d77cc82e0c4bb375ab242695004, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e199d30629395b43a1662a0c12cc8fe, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[0].name
+      value: mud
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 07316d77cc82e0c4bb375ab242695004, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[1].name
+      value: grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b3e115a70f349541b0d8575ed8ccf78, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[2].name
+      value: cement
       objectReference: {fileID: 0}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_RootOrder
@@ -9888,7 +9932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8957304962413023527, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
       propertyPath: m_TagString
-      value: Floor
+      value: Grass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}

@@ -7946,7 +7946,7 @@ GameObject:
   - component: {fileID: 1527530698}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Floor
+  m_TagString: Mud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12245,6 +12245,22 @@ PrefabInstance:
       propertyPath: antialiasingMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 07316d77cc82e0c4bb375ab242695004, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e199d30629395b43a1662a0c12cc8fe, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b3e115a70f349541b0d8575ed8ccf78, type: 3}
     - target: {fileID: 4888337499716421832, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: far clip plane
       value: 2000

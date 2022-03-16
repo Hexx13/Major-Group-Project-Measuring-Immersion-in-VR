@@ -8,6 +8,8 @@ TagManager:
   - Tele
   - Prop
   - Plaer
+  - Grass
+  - Mud
   layers:
   - Default
   - TransparentFX
