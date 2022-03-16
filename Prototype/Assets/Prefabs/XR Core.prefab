@@ -263,7 +263,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpActionReference: {fileID: -3374558994088282034, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   jumpForce: 200
-  footsteps: []
+  footsteps:
+  - {fileID: 8300000, guid: 3e199d30629395b43a1662a0c12cc8fe, type: 3}
+  - {fileID: 8300000, guid: 07316d77cc82e0c4bb375ab242695004, type: 3}
+  - {fileID: 8300000, guid: 6b3e115a70f349541b0d8575ed8ccf78, type: 3}
+  - {fileID: 8300000, guid: c4fbe1ce89e49224bbcd7ea12893b6ae, type: 3}
   audioPlayer: {fileID: 5808888338257563648}
   boby: {fileID: 3194164274954046508}
 --- !u!82 &288776829794771897

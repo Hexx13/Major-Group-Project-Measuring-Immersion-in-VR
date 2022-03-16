@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         //makes sure the player is grounded.
         if (!_isGrounded) return;
+        audioPlayer.PlayOneShot(footsteps[3]);
         _body.AddForce(Vector3.up * jumpForce);
         _isGrounded = false;
     }

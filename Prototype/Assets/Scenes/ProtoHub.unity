@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38479948, g: 0.4721464, b: 0.61834335, a: 1}
+  m_IndirectSpecularColor: {r: 0.3851593, g: 0.4724939, b: 0.6185859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1594,7 +1594,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 508602648}
-  m_RootOrder: 38
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &265457408
 PrefabInstance:
@@ -1830,7 +1830,7 @@ Transform:
   - {fileID: 18253922}
   - {fileID: 1477174783}
   m_Father: {fileID: 508602648}
-  m_RootOrder: 55
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &307421536
 PrefabInstance:
@@ -3085,6 +3085,10 @@ Transform:
   - {fileID: 177061429}
   - {fileID: 1592294825}
   - {fileID: 628733993}
+  - {fileID: 243101679}
+  - {fileID: 1498463526}
+  - {fileID: 1486010382}
+  - {fileID: 306124004}
   - {fileID: 632992806}
   - {fileID: 574193619}
   - {fileID: 1801816781}
@@ -3095,6 +3099,7 @@ Transform:
   - {fileID: 494705398}
   - {fileID: 1917443678}
   - {fileID: 156321649}
+  - {fileID: 1030434930}
   - {fileID: 858803725}
   - {fileID: 1998871619}
   - {fileID: 1299839408}
@@ -3116,7 +3121,6 @@ Transform:
   - {fileID: 536181887}
   - {fileID: 1947840554}
   - {fileID: 567777017}
-  - {fileID: 243101679}
   - {fileID: 221826438}
   - {fileID: 2060334148}
   - {fileID: 1740258552}
@@ -3130,11 +3134,7 @@ Transform:
   - {fileID: 1484967381}
   - {fileID: 463015621}
   - {fileID: 1349281583}
-  - {fileID: 1498463526}
   - {fileID: 84995022}
-  - {fileID: 1486010382}
-  - {fileID: 306124004}
-  - {fileID: 1030434930}
   - {fileID: 1353815123}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -5153,6 +5153,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 07316d77cc82e0c4bb375ab242695004, type: 3}
+    - target: {fileID: 4888337498724724675, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: footsteps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e199d30629395b43a1662a0c12cc8fe, type: 3}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5798,7 +5806,7 @@ Transform:
   - {fileID: 1127756017}
   - {fileID: 1575156688}
   m_Father: {fileID: 508602648}
-  m_RootOrder: 56
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1040281915
 PrefabInstance:
@@ -8169,7 +8177,7 @@ Transform:
   - {fileID: 1222537454}
   - {fileID: 1930961224}
   m_Father: {fileID: 508602648}
-  m_RootOrder: 54
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1498463523
 GameObject:
@@ -8321,7 +8329,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 508602648}
-  m_RootOrder: 52
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1575156685
 GameObject:
@@ -10989,7 +10997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8957304962413023527, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
       propertyPath: m_TagString
-      value: Floor
+      value: Grass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
