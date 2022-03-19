@@ -23,6 +23,7 @@ public class Tutorial : MonoBehaviour
     
 
     public GameObject xrCore;
+    public GameObject [] portals;
     public GameObject [] challengePrefabs;
     private BoxCollider collider;
     // Start is called before the first frame update
@@ -67,5 +68,12 @@ public class Tutorial : MonoBehaviour
             Debug.Log("Purple Shroom exit");
         }
         Debug.Log("Collision eexit");
+    }
+
+    private async void Challenge(){
+        if(challengeItem1&&challengeItem2&&challengeItem3){
+            for(int i = 0; i < portals.Length; i++)
+            portals[i].SetActive(true);
+        }
     }
 }
