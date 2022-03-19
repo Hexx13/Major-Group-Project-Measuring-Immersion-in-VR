@@ -3969,11 +3969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada3888379f4e894dbc3e7720e8014d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xrCore: {fileID: 844689104}
+  xrCore: {fileID: 0}
   challengePrefabs:
-  - {fileID: 8117934384310407326, guid: 5dfa403801e17264a9fbe1bfa75eddc3, type: 3}
-  - {fileID: 1058349877903204612, guid: 108798e0776b46a42b510d654c5eacf7, type: 3}
-  - {fileID: 9088455465221860970, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
+  - {fileID: 3813037259605374133}
+  - {fileID: 5508567966718656109}
+  - {fileID: 2359422131447537428}
 --- !u!65 &632992809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3982,7 +3982,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632992807}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.02, z: 0.05}
@@ -4817,11 +4817,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
---- !u!1 &844689104 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1546802043515124690, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
-  m_PrefabInstance: {fileID: 844689103}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &854400781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10774,12 +10769,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_08
       objectReference: {fileID: 0}
+    - target: {fileID: 2359422131624583465, guid: 108798e0776b46a42b510d654c5eacf7, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2359422131624583466, guid: 108798e0776b46a42b510d654c5eacf7, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1961282723}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 108798e0776b46a42b510d654c5eacf7, type: 3}
+--- !u!1 &2359422131447537428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1058349877903204612, guid: 108798e0776b46a42b510d654c5eacf7, type: 3}
+  m_PrefabInstance: {fileID: 2359422131447537427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2685705423162434733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431170426057522110, guid: 108798e0776b46a42b510d654c5eacf7, type: 3}
@@ -10798,7 +10802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553161639084753888, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.57
+      value: -2.559
       objectReference: {fileID: 0}
     - target: {fileID: 3553161639084753888, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10840,12 +10844,21 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1961282723}
+    - target: {fileID: 3813037258361047882, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9088455465221860970, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
       propertyPath: m_Name
       value: Pouch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
+--- !u!1 &3813037259605374133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9088455465221860970, guid: 50f8cc7e6179970468ea4e34ae1272c9, type: 3}
+  m_PrefabInstance: {fileID: 3813037259605374132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4385080170656805586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8117934384310897854, guid: 5dfa403801e17264a9fbe1bfa75eddc3, type: 3}
@@ -10862,6 +10875,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1961282723}
+    - target: {fileID: 5508567967373439457, guid: 5dfa403801e17264a9fbe1bfa75eddc3, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8117934384310407326, guid: 5dfa403801e17264a9fbe1bfa75eddc3, type: 3}
       propertyPath: m_Name
       value: Mushroom_01
@@ -10912,3 +10929,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dfa403801e17264a9fbe1bfa75eddc3, type: 3}
+--- !u!1 &5508567966718656109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8117934384310407326, guid: 5dfa403801e17264a9fbe1bfa75eddc3, type: 3}
+  m_PrefabInstance: {fileID: 5508567966718656108}
+  m_PrefabAsset: {fileID: 0}
