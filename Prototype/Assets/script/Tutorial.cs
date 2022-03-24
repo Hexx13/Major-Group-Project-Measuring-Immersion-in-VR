@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-
+    private int challengeStatus = 0;
+    private bool playerLeftSpawn = false;
     private bool challengeItem1,  challengeItem2,  challengeItem3;
 
     //Step 1 - Run Voicover for introduction
-    //Step 2 
     //  Step 2.1 - Introduce movement
     //      Step 2.1.1 - Run Voiceover for movement
     //      Step 2.1.2 - Confirm Movement
@@ -35,7 +35,7 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        tutorial();
     }
 
 
@@ -56,7 +56,9 @@ public class Tutorial : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
+        if(collision.gameObject.CompareTag("Plaer"))playerLeftSpawn = true;
         
+
         if(collision.gameObject.Equals(challengePrefabs[0])){
             challengeItem1 = false;
             Debug.Log("Pouch exit");
@@ -70,7 +72,44 @@ public class Tutorial : MonoBehaviour
         Debug.Log("Collision eexit");
     }
 
-    private async void Challenge(){
+
+    private void tutorial(){
+        switch(challengeStatus){
+            case 0:
+                challenge1();
+                if(playerLeftSpawn)challengeStatus++;
+                break;
+        
+            case 1:
+                challenge2();
+                challengeStatus++;
+                break;
+                //make unity wait a few seconds
+
+            case 2:
+                challenge3();
+                break;
+        }
+
+
+    }
+
+
+
+
+    private void challenge1(){
+        //intro voiceover
+            //How to look around Voicover
+            //How To move
+            //how to jump
+            
+
+        
+
+
+    }
+    private void challenge2(){}
+    private void challenge3(){
         if(challengeItem1&&challengeItem2&&challengeItem3){
             for(int i = 0; i < portals.Length; i++)
             portals[i].SetActive(true);
