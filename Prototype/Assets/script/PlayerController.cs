@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using Random = UnityEngine.Random;
 
+
+
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
@@ -18,7 +20,9 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider _collider;
     private Rigidbody _body;
     public AudioClip[] footsteps;
+    public AudioClip[] buttons;
     public AudioSource audioPlayer;
+    public AudioSource tutorialPlayer;
     private bool _isGrounded=true;
     private bool _onGrass = false;
     private bool _onCement = false;
@@ -52,8 +56,14 @@ public class PlayerController : MonoBehaviour
     
      void OnCollisionEnter(Collision collision)
      {
-         
-          if (collision.gameObject.tag == "Grass")
+         if (collision.gameObject.tag == "Button")
+         {
+             var nameOfCollide=collision.collider.gameObject.name;
+            tutorialButtons(int.Parse(nameOfCollide));
+
+         }
+
+         if (collision.gameObject.tag == "Grass")
          {
              _onGrass = true;
              _isGrounded = true;
@@ -99,20 +109,20 @@ public class PlayerController : MonoBehaviour
          if(_onCement && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              //play sound
-             audioPlayer.volume = Random.Range(.5f, 1f);
+             audioPlayer.volume = Random.Range(.8f, 1f);
              audioPlayer.pitch = Random.Range(.8f, 1f);
              
              audioPlayer.PlayOneShot(footsteps[2]);
          }
          else if (_onGrass && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
-             audioPlayer.volume = Random.Range(.5f, 1f);
+             audioPlayer.volume = Random.Range(.8f, 1f);
              audioPlayer.pitch = Random.Range(.8f, 1f);
              audioPlayer.PlayOneShot(footsteps[1]);
          }
          else if (_onMud && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
-             audioPlayer.volume = Random.Range(.5f, 1f);
+             audioPlayer.volume = Random.Range(.8f, 1f);
              audioPlayer.pitch = Random.Range(.8f, 1f);
              audioPlayer.PlayOneShot(footsteps[0]);
          }
@@ -120,7 +130,15 @@ public class PlayerController : MonoBehaviour
 
      }
 
-    //changes the global variablere _isGrounded to false and makes the player physically jump
+     void tutorialButtons(int collideNum)
+     {
+         if (!tutorialPlayer.isPlaying)
+         {
+             tutorialPlayer.PlayOneShot(buttons[collideNum]);
+         }
+     }
+
+     //changes the global variablere _isGrounded to false and makes the player physically jump
      private void OnJump(InputAction.CallbackContext obj)
     {
         //makes sure the player is grounded.
