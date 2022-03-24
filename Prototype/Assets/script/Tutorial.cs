@@ -108,7 +108,11 @@ public class Tutorial : MonoBehaviour
 
 
     }
-    private void challenge2(){}
+    private void challenge2(){
+        //how to pick up things voice over
+        
+
+    }
     private void challenge3(){
         if(challengeItem1&&challengeItem2&&challengeItem3){
             for(int i = 0; i < portals.Length; i++)
