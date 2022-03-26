@@ -10,6 +10,7 @@ TagManager:
   - Plaer
   - Grass
   - Mud
+  - Button
   layers:
   - Default
   - TransparentFX
