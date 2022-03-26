@@ -18843,7 +18843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congrats on finishing the first section of the obstacle course!
+  m_text: Congrats on finishing the obstacle course
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19846,10 +19846,18 @@ PrefabInstance:
       propertyPath: m_CameraYOffset
       value: 2.2222222e+20
       objectReference: {fileID: 0}
+    - target: {fileID: 4888337498775522561, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: -8679921383154817045, guid: 0d15ba1bfeb82834cb12f212b022e290, type: 3}
     - target: {fileID: 4888337498946852614, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4888337499116316269, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: -8679921383154817045, guid: 8d49c10bd511f3d438ac4446216accf0, type: 3}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_RootOrder
       value: 0

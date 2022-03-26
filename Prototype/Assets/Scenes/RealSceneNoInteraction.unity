@@ -1179,6 +1179,14 @@ PrefabInstance:
       propertyPath: footsteps.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 6b3e115a70f349541b0d8575ed8ccf78, type: 3}
+    - target: {fileID: 4888337498775522561, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: -8679921383154817045, guid: 8d49c10bd511f3d438ac4446216accf0, type: 3}
+    - target: {fileID: 4888337499116316269, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: -8679921383154817045, guid: 8d49c10bd511f3d438ac4446216accf0, type: 3}
     - target: {fileID: 4888337499716421832, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: far clip plane
       value: 2000
