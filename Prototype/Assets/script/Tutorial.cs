@@ -25,6 +25,8 @@ public class Tutorial : MonoBehaviour
 
     public TextMeshPro scoreText;
     public GameObject xrCore;
+    public AudioClip[] voiceoverSound;
+    public AudioSource tutorialPlayer;
     public GameObject [] portals;
     public GameObject [] challengePrefabs;
     private BoxCollider collider;
@@ -101,6 +103,7 @@ public class Tutorial : MonoBehaviour
 
     private void challenge1(){
         //intro voiceover
+        tutorialPlayer.PlayOneShot(voiceoverSound[0]);
             //How to look around Voicover
             //How To move
             //how to jump
@@ -111,6 +114,7 @@ public class Tutorial : MonoBehaviour
 
     }
     private void challenge2(){
+        tutorialPlayer.PlayOneShot(voiceoverSound[1]);
         //how to pick up things voice over
         
 
