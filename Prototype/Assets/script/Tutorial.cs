@@ -120,6 +120,7 @@ public class Tutorial : MonoBehaviour
 
     }
     private void challenge3(){
+        tutorialPlayer.PlayOneShot(voiceoverSound[2]);
         scoreText.SetText("Items Collected " + challengeCount + "/3");
         if(challengeCount >= 3){
             for(int i = 0; i < portals.Length; i++)
