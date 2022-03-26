@@ -6,7 +6,7 @@ public class Tutorial : MonoBehaviour
 {
     private int challengeStatus = 0;
     private bool playerLeftSpawn = false;
-    private bool challengeItem1,  challengeItem2,  challengeItem3;
+    private int challengeCount = 0;
 
     //Step 1 - Run Voicover for introduction
     //  Step 2.1 - Introduce movement
@@ -43,13 +43,13 @@ public class Tutorial : MonoBehaviour
     {
 
         if(collision.gameObject.Equals(challengePrefabs[0])){
-            challengeItem1 = true;
+            challengeCount++;
             Debug.Log("Pouch enter");
         }else if(collision.gameObject.Equals(challengePrefabs[1])){
-            challengeItem2 = true;
+            challengeCount++;
             Debug.Log("Red Shroom enter");
         }else if(collision.gameObject.Equals(challengePrefabs[2])){
-            challengeItem3 = true;
+            challengeCount++;
             Debug.Log("Purple Shroom enter");
         }
         Debug.Log("Collision enter");
@@ -60,13 +60,13 @@ public class Tutorial : MonoBehaviour
         
 
         if(collision.gameObject.Equals(challengePrefabs[0])){
-            challengeItem1 = false;
+            challengeCount--;
             Debug.Log("Pouch exit");
         }else if(collision.gameObject.Equals(challengePrefabs[1])){
-            challengeItem2 = false;
+            challengeCount--;
             Debug.Log("Red Shroom exit");
         }else if(collision.gameObject.Equals(challengePrefabs[2])){
-            challengeItem3 = false;
+            challengeCount--;
             Debug.Log("Purple Shroom exit");
         }
         Debug.Log("Collision eexit");
@@ -114,7 +114,7 @@ public class Tutorial : MonoBehaviour
 
     }
     private void challenge3(){
-        if(challengeItem1&&challengeItem2&&challengeItem3){
+        if(challengeCount >= 3){
             for(int i = 0; i < portals.Length; i++)
             portals[i].SetActive(true);
         }
