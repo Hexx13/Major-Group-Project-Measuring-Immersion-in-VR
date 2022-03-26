@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Tutorial : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class Tutorial : MonoBehaviour
     //  reveal portal
     
 
+    public TextMeshPro scoreText;
     public GameObject xrCore;
     public GameObject [] portals;
     public GameObject [] challengePrefabs;
@@ -35,7 +37,7 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tutorial();
+        //tutorial();
     }
 
 
@@ -56,7 +58,7 @@ public class Tutorial : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
-        if(collision.gameObject.CompareTag("Plaer"))playerLeftSpawn = true;
+        if(collision.gameObject.CompareTag("Plaer"))Debug.Log("player left spawn");//playerLeftSpawn = true;
         
 
         if(collision.gameObject.Equals(challengePrefabs[0])){
@@ -114,6 +116,7 @@ public class Tutorial : MonoBehaviour
 
     }
     private void challenge3(){
+        scoreText.SetText("Items Collected " + challengeCount + "/3");
         if(challengeCount >= 3){
             for(int i = 0; i < portals.Length; i++)
             portals[i].SetActive(true);
