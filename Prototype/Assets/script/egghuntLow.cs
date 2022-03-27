@@ -34,35 +34,36 @@ public class egghuntLow : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collider collision)
     {
         for(int i = 0; i < eggs.Length; i++)
             if(collision.gameObject.Equals(eggs[i])){
                 challengeCount++;
+                
+                
+                //make sound/sfx
+                soundPlayer.PlayOneShot(voiceoverSound[0]);
+                //disable gameobject
+                eggs[i].SetActive(false);
+            }
+        
+        
+        
+        
+       /* for(int i = 0; i < eggs.Length; i++)
+            if(collision.gameObject.Equals(eggs[i])){
+                challengeCount++;
                 Debug.Log("Pouch enter");
             }
-        Debug.Log("Collision enter");
+        Debug.Log("Collision enter");*/
     }
-    private void OnTriggerExit(Collider collision)
-    {
-        if(collision.gameObject.CompareTag("Plaer"))Debug.Log("player left spawn");//playerLeftSpawn = true;
-
-        for(int i = 0; i < eggs.Length; i++)
-            if (collision.gameObject.Equals(eggs[0]))
-            {
-                challengeCount--;
-                Debug.Log("Pouch exit");
-            }
-
-        Debug.Log("Collision eexit");
-    }
-
+   
 
     private void hunt(){
        
         soundPlayer.PlayOneShot(voiceoverSound[1]);
         scoreText.SetText("Items Collected " + challengeCount + "/5");
-        if(challengeCount >= 3){
+        if(challengeCount >= 5){
             for(int i = 0; i < portals.Length; i++)
                 portals[i].SetActive(true);
         }
