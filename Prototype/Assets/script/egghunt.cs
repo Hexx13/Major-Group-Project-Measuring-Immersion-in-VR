@@ -36,17 +36,11 @@ public class egghunt : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-
-        if(collision.gameObject.Equals(eggs[0])){
-            challengeCount++;
-            Debug.Log("Pouch enter");
-        }else if(collision.gameObject.Equals(eggs[1])){
-            challengeCount++;
-            Debug.Log("Red Shroom enter");
-        }else if(collision.gameObject.Equals(eggs[2])){
-            challengeCount++;
-            Debug.Log("Purple Shroom enter");
-        }
+        for(int i = 0; i < eggs.Length; i++)
+            if(collision.gameObject.Equals(eggs[i])){
+                challengeCount++;
+                Debug.Log("Pouch enter");
+            }
         Debug.Log("Collision enter");
     }
     private void OnTriggerExit(Collider collision)
