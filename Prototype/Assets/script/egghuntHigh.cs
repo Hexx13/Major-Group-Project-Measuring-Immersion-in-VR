@@ -7,8 +7,6 @@ using UnityEngine.Serialization;
 public class egghuntHigh : MonoBehaviour
 {
     //old code from tutorial
-    private int challengeStatus = 0;
-    private bool playerLeftSpawn = false;
     private int challengeCount = 0;
 
     
