@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Serialization;
 
-public class egghunt : MonoBehaviour
+public class egghuntHigh : MonoBehaviour
 {
     //old code from tutorial
     private int challengeStatus = 0;
