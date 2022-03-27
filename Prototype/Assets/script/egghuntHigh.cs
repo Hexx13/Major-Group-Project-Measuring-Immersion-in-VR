@@ -30,7 +30,7 @@ public class egghuntHigh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //tutorial();
+        hunt();
     }
 
 
@@ -40,9 +40,16 @@ public class egghuntHigh : MonoBehaviour
             if(collision.gameObject.Equals(eggs[i])){
                 challengeCount++;
                 Debug.Log("Pouch enter");
+                
+                //make sound/sfx
+                soundPlayer.PlayOneShot(voiceoverSound[0]);
+                //disable gameobject
+                eggs[i].SetActive(false);
             }
         Debug.Log("Collision enter");
     }
+    
+    /*
     private void OnTriggerExit(Collider collision)
     {
         if(collision.gameObject.CompareTag("Plaer"))Debug.Log("player left spawn");//playerLeftSpawn = true;
@@ -55,15 +62,15 @@ public class egghuntHigh : MonoBehaviour
             }
 
         Debug.Log("Collision eexit");
-    }
+    }*/
 
 
     private void hunt(){
-       
-        soundPlayer.PlayOneShot(voiceoverSound[1]);
+        soundPlayer.PlayOneShot(voiceoverSound[0]);
         scoreText.SetText("Items Collected " + challengeCount + "/5");
-        if(challengeCount >= 3){
+        if(challengeCount >= 5){
             for(int i = 0; i < portals.Length; i++)
+                
                 portals[i].SetActive(true);
         }
     }
