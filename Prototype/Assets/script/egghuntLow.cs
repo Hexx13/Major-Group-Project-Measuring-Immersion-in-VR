@@ -18,6 +18,7 @@ public class egghuntLow : MonoBehaviour
     public AudioSource soundPlayer;
     public GameObject [] portals;
     private BoxCollider collider;
+    
     // easter egg array
     public GameObject [] eggs;
     
@@ -39,7 +40,6 @@ public class egghuntLow : MonoBehaviour
         for(int i = 0; i < eggs.Length; i++)
             if(collision.gameObject.Equals(eggs[i])){
                 challengeCount++;
-                
                 
                 //make sound/sfx
                 soundPlayer.PlayOneShot(voiceoverSound[0]);
