@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor;
 using UnityEngine.Serialization;
 
 public class egghuntHigh : MonoBehaviour
@@ -13,6 +15,8 @@ public class egghuntHigh : MonoBehaviour
     //old code from tutorial
     public TextMeshPro scoreText;
     public AudioClip[] voiceoverSound;
+    public AudioClip putDownNoise;
+    public AudioClip onPickupNoise;
     public AudioSource soundPlayer;
     public GameObject [] portals;
     private BoxCollider collider;
@@ -31,6 +35,7 @@ public class egghuntHigh : MonoBehaviour
         hunt();
     }
 
+    
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -40,7 +45,7 @@ public class egghuntHigh : MonoBehaviour
                 Debug.Log("Pouch enter");
                 
                 //make sound/sfx
-                soundPlayer.PlayOneShot(voiceoverSound[0]);
+                soundPlayer.PlayOneShot(onPickupNoise);
                 //disable gameobject
                 eggs[i].SetActive(false);
             }

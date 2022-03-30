@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.093921326, g: 0.11918657, b: 0.15502876, a: 1}
+  m_IndirectSpecularColor: {r: 0.094288744, g: 0.11945031, b: 0.15523598, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1036,7 +1036,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 306122298}
   voiceoverSound: []
-  soundPlayer: {fileID: 0}
+  putDownNoise: {fileID: 8300000, guid: 61ef7f650bac4a241bdc62343293fd0d, type: 3}
+  onPickupNoise: {fileID: 8300000, guid: 796540af0d619e740a0e259b023c2218, type: 3}
+  soundPlayer: {fileID: 2131593465}
   portals:
   - {fileID: 2025518887}
   eggs:
@@ -14509,6 +14511,14 @@ PrefabInstance:
       propertyPath: footsteps.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: c4fbe1ce89e49224bbcd7ea12893b6ae, type: 3}
+    - target: {fileID: 4888337498775522574, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888337499116316266, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 4888337499716421832, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: far clip plane
       value: 2000
@@ -14559,6 +14569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+--- !u!82 &2131593465 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5808888338257563648, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+  m_PrefabInstance: {fileID: 2131593464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2135448760
 PrefabInstance:
   m_ObjectHideFlags: 0

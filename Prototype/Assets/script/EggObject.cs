@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class EggObject : MonoBehaviour
     public AudioSource objectPlayer;
     private float timer = 5;
     public AudioClip ambience;
+
+    public AudioClip onPickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +27,19 @@ public class EggObject : MonoBehaviour
         if (timer > 0)
         {
             PlayAmbience();
-            timer = 8;
+            timer = 20;
         }
 
+    }
+
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("hand"))
+        {
+            objectPlayer.PlayOneShot(onPickup);
+        }
     }
 
     void PlayAmbience()

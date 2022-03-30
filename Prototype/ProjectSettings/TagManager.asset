@@ -11,6 +11,7 @@ TagManager:
   - Grass
   - Mud
   - Button
+  - Hand
   layers:
   - Default
   - TransparentFX
