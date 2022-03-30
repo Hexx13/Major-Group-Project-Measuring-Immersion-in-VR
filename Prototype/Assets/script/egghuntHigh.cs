@@ -19,6 +19,9 @@ public class egghuntHigh : MonoBehaviour
     // easter egg array
     public GameObject [] eggs;
     
+    private float v1Delay = 5, v2Delay = 1.5f;
+    private bool v1Played = false,v2Played = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -64,12 +67,29 @@ public class egghuntHigh : MonoBehaviour
 
 
     private void hunt(){
-        soundPlayer.PlayOneShot(voiceoverSound[0]);
-        scoreText.SetText("Items Collected " + challengeCount + "/5");
+        scoreText.SetText("Hidden Items Found " + challengeCount + "/5");
+        
+        
+        if(v1Delay >= 0 && !v1Played)v1Delay-=Time.deltaTime;
+        else if (v1Delay <= 0 && !v1Played)
+        {
+            v1Played = true;
+            soundPlayer.PlayOneShot(voiceoverSound[1]);
+        }
+        
+     
         if(challengeCount >= 5){
             for(int i = 0; i < portals.Length; i++)
-                
+                //portal animation here Egguard
                 portals[i].SetActive(true);
+            
+             
+            if(v2Delay >= 0 && !v2Played)v2Delay-=Time.deltaTime;
+            else if (v2Delay <= 0 && !v2Played)
+            {
+                v2Played = true;
+                soundPlayer.PlayOneShot(voiceoverSound[2]);
+            }
         }
     }
 }
