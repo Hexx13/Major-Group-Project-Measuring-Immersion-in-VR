@@ -1042,7 +1042,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   voiceoverSound: []
-  soundPlayer: {fileID: 0}
+  pickupNoise: {fileID: 8300000, guid: 61ef7f650bac4a241bdc62343293fd0d, type: 3}
+  soundPlayer: {fileID: 2131593465}
   portals: []
   eggs:
   - {fileID: 538822004}
@@ -14783,6 +14784,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+--- !u!82 &2131593465 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5808888338257563648, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+  m_PrefabInstance: {fileID: 2131593464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2135448760
 PrefabInstance:
   m_ObjectHideFlags: 0

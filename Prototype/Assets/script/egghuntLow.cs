@@ -15,6 +15,7 @@ public class egghuntLow : MonoBehaviour
     //old code from tutorial
     public TextMeshPro scoreText;
     public AudioClip[] voiceoverSound;
+    public AudioClip pickupNoise;
     public AudioSource soundPlayer;
     public GameObject [] portals;
     private BoxCollider collider;
@@ -42,7 +43,7 @@ public class egghuntLow : MonoBehaviour
                 
                 
                 //make sound/sfx
-                soundPlayer.PlayOneShot(voiceoverSound[0]);
+                soundPlayer.PlayOneShot(pickupNoise);
                 //disable gameobject
                 eggs[i].SetActive(false);
             }
