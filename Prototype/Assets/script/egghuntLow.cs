@@ -30,11 +30,11 @@ public class egghuntLow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //tutorial();
+        hunt();
     }
 
 
-    private void OnCollisionEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         for(int i = 0; i < eggs.Length; i++)
             if(collision.gameObject.Equals(eggs[i])){
@@ -60,9 +60,12 @@ public class egghuntLow : MonoBehaviour
    
 
     private void hunt(){
-       
-        soundPlayer.PlayOneShot(voiceoverSound[1]);
-        scoreText.SetText("Items Collected " + challengeCount + "/5");
+        float v1Delay = 5;
+        bool v1Played = false;
+        if(v1Delay >= 0 && !v1Played)v1Delay-=Time.deltaTime;
+        else if(v1Delay <= 0 &&!v1Played) soundPlayer.PlayOneShot(voiceoverSound[1]);
+        
+        scoreText.SetText("Hidden Items Found " + challengeCount + "/5");
         if(challengeCount >= 5){
             for(int i = 0; i < portals.Length; i++)
                 portals[i].SetActive(true);
