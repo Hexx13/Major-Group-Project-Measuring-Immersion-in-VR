@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource tutorialPlayer;
     private bool _isGrounded=true;
     private bool _onGrass = false;
-    private bool _onCement = false;
+    private bool _onMetal = false;
     private bool _onMud = false;
  
     public Rigidbody boby;
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
              _isGrounded = true;
 
              _onMud = false;
-             _onCement = false;
+             _onMetal = false;
          }
          else if (collision.gameObject.tag == "Mud")
          {
@@ -77,11 +77,11 @@ public class PlayerController : MonoBehaviour
              _isGrounded = true;
 
              _onGrass = false;
-             _onCement = false;
+             _onMetal = false;
          }
-         else if (collision.gameObject.tag == "Cement")
+         else if (collision.gameObject.tag == "Metal")
          {
-             _onCement = true;
+             _onMetal = true;
              _isGrounded = true;
 
              _onGrass = false;
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
      void footstep()
      {
          //makes sure player is on the ground, step sound isnt playing and player is moving.
-         if(_onCement && _isGrounded && audioPlayer.isPlaying == false && isMoving())
+         if(_onMetal && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              //play sound
              audioPlayer.volume = Random.Range(.8f, 1f);

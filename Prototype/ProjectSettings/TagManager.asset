@@ -12,6 +12,7 @@ TagManager:
   - Mud
   - Button
   - Hand
+  - Metal
   layers:
   - Default
   - TransparentFX

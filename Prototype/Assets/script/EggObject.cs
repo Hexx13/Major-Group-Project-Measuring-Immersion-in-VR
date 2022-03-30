@@ -24,19 +24,19 @@ public class EggObject : MonoBehaviour
 
     void timerPlayer()
     {
-        if (timer > 0)
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
             PlayAmbience();
-            timer = 20;
+            timer = 15;
         }
 
     }
 
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        if (collision.gameObject.CompareTag("hand"))
+        if ()
         {
             objectPlayer.PlayOneShot(onPickup);
         }
