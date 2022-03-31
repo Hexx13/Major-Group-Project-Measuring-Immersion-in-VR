@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private bool _onGrass = false;
     private bool _onMetal = false;
     private bool _onMud = false;
+    private bool _onfloor = false;
  
     public Rigidbody boby;
 
@@ -67,7 +68,8 @@ public class PlayerController : MonoBehaviour
          {
              _onGrass = true;
              _isGrounded = true;
-
+             
+             _onfloor = false;
              _onMud = false;
              _onMetal = false;
          }
@@ -76,6 +78,7 @@ public class PlayerController : MonoBehaviour
              _onMud = true;
              _isGrounded = true;
 
+             _onfloor = false;
              _onGrass = false;
              _onMetal = false;
          }
@@ -84,6 +87,16 @@ public class PlayerController : MonoBehaviour
              _onMetal = true;
              _isGrounded = true;
 
+             _onfloor = false;
+             _onGrass = false;
+             _onMud = false;
+         }
+         else if (collision.gameObject.tag == "Floor")
+         {
+             _onMetal = false;
+             _isGrounded = true;
+             
+             _onfloor = true;
              _onGrass = false;
              _onMud = false;
          }
