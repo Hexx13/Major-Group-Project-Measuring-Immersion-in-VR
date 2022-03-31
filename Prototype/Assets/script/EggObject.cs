@@ -36,7 +36,7 @@ public class EggObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if ()
+        if (true)
         {
             objectPlayer.PlayOneShot(onPickup);
         }
