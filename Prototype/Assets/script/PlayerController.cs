@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
         lastPos = boby.transform.position;
         _xrOrigin = GetComponent<XROrigin>();
         _collider = GetComponent<CapsuleCollider>();

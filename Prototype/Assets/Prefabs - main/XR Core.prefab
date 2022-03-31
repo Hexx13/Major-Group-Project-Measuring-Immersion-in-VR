@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Camera: {fileID: 4888337499716421832}
   m_OriginBaseGameObject: {fileID: 4888337498724724686}
   m_CameraFloorOffsetObject: {fileID: 4888337498946852615}
-  m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 1.1176
+  m_RequestedTrackingOriginMode: 1
+  m_CameraYOffset: 0
 --- !u!136 &4888337498724724673
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 5044347012008298369, guid: 434fedbd42a6a804ead89cd4b0f1f9e1, type: 3}
+  m_ModelPrefab: {fileID: 1785615897125693599, guid: 2e62bb981d66eff4a8b01d7b9b879ca9, type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 5044347012008298369, guid: 434fedbd42a6a804ead89cd4b0f1f9e1, type: 3}
+  m_ModelPrefab: {fileID: 1785615897125693599, guid: 2e62bb981d66eff4a8b01d7b9b879ca9, type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
