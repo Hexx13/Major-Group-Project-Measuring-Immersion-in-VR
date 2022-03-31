@@ -14052,6 +14052,10 @@ PrefabInstance:
       propertyPath: footsteps.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: c4fbe1ce89e49224bbcd7ea12893b6ae, type: 3}
+    - target: {fileID: 4888337498724724685, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4888337499716421832, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: far clip plane
       value: 2000
