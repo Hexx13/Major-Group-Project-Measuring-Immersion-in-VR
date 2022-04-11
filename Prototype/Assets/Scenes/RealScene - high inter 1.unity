@@ -2168,6 +2168,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2048487557469224759, guid: 0ac8c7292c9cebe40af67618c9d536b3, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048487557986624631, guid: 0ac8c7292c9cebe40af67618c9d536b3, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 6419604580342832736, guid: 0ac8c7292c9cebe40af67618c9d536b3, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -3552,6 +3560,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 290568543600937075, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 856284849276247665, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1263881239168321199, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_Name
       value: StreetLamp1_ShortDouble (Concrete) (1)
@@ -3599,6 +3615,14 @@ PrefabInstance:
     - target: {fileID: 2869193814172398780, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014326466624821, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014327953757263, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
@@ -3683,6 +3707,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 290568543600937075, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 856284849276247665, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1263881239168321199, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_Name
       value: StreetLamp1_ShortDouble (Concrete) (4)
@@ -3730,6 +3762,14 @@ PrefabInstance:
     - target: {fileID: 2869193814172398780, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014326466624821, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014327953757263, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
@@ -4432,6 +4472,22 @@ PrefabInstance:
     - target: {fileID: 4551902510600510569, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878695017701125, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878695163426624, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878695764855419, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878696259203349, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
@@ -5558,6 +5614,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 4491464743887697725, guid: 3a162d9b3eabf5541aeafc613988e630, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689732806685220687, guid: 3a162d9b3eabf5541aeafc613988e630, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 5154010266989119465, guid: 3a162d9b3eabf5541aeafc613988e630, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6815,6 +6879,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 290568543600937075, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 856284849276247665, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1263881239168321199, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_Name
       value: StreetLamp1_ShortDouble (Concrete)
@@ -6862,6 +6934,14 @@ PrefabInstance:
     - target: {fileID: 2869193814172398780, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014326466624821, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014327953757263, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
@@ -7061,9 +7141,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 1220313615576999983, guid: d72ff925f26cac64eab6c2d0b0414f4e, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1220313616506290517, guid: d72ff925f26cac64eab6c2d0b0414f4e, type: 3}
       propertyPath: m_Intensity
-      value: 1.36
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 1220313616506290517, guid: d72ff925f26cac64eab6c2d0b0414f4e, type: 3}
       propertyPath: m_SpotAngle
@@ -9178,6 +9262,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 2048487557469224759, guid: 0ac8c7292c9cebe40af67618c9d536b3, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048487557986624631, guid: 0ac8c7292c9cebe40af67618c9d536b3, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 6419604580342832736, guid: 0ac8c7292c9cebe40af67618c9d536b3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10415,6 +10507,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 1220313615576999983, guid: d72ff925f26cac64eab6c2d0b0414f4e, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220313616506290517, guid: d72ff925f26cac64eab6c2d0b0414f4e, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 6167072802526421414, guid: d72ff925f26cac64eab6c2d0b0414f4e, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -11777,6 +11877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290568543600937075, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 856284849276247665, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1263881239168321199, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_Name
       value: StreetLamp1_ShortDouble (Concrete) (2)
@@ -11824,6 +11932,14 @@ PrefabInstance:
     - target: {fileID: 2869193814172398780, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014326466624821, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014327953757263, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
@@ -13521,6 +13637,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400237843}
     m_Modifications:
+    - target: {fileID: 290568543600937075, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 856284849276247665, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1263881239168321199, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_Name
       value: StreetLamp1_ShortDouble (Concrete) (3)
@@ -13568,6 +13692,14 @@ PrefabInstance:
     - target: {fileID: 2869193814172398780, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014326466624821, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110014327953757263, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53511846966b6ce4c8acb830be33adff, type: 3}
@@ -13934,6 +14066,22 @@ PrefabInstance:
     - target: {fileID: 4551902510600510569, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878695017701125, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878695163426624, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878695764855419, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813878696259203349, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9bd71fee0217e45867eb0d17f859b2, type: 3}
