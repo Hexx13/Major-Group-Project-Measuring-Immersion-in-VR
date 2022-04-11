@@ -82,23 +82,24 @@ public class egghuntHigh : MonoBehaviour
         if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
         else if (v1Delay <= 0 && !v1Played)
         {
+            //soundPlayer.PlayOneShot(voiceoverSound[1]);
             v1Played = true;
-            soundPlayer.PlayOneShot(voiceoverSound[1]);
         }
-
-
+        
         if (challengeCount >= 5)
         {
-            for (int i = 0; i < portals.Length; i++)
-                //portal animation here Egguard
-                portals[i].SetActive(true);
-
             if (v2Delay >= 0 && !v2Played) v2Delay -= Time.deltaTime;
             else if (v2Delay <= 0 && !v2Played)
             {
                 v2Played = true;
-                soundPlayer.PlayOneShot(voiceoverSound[2]);
+                //soundPlayer.PlayOneShot(voiceoverSound[2]);
+                  
+                for (int i = 0; i < portals.Length; i++)
+                
+                    //portal animation here Egguard
+                    portals[i].SetActive(true);
             }
         }
+          
     }
 }
