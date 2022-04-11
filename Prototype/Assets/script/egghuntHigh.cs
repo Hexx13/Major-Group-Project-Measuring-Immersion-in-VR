@@ -20,18 +20,18 @@ public class egghuntHigh : MonoBehaviour
     public AudioSource soundPlayer;
     public GameObject[] portals;
 
-    private BoxCollider collider;
+   
 
     // easter egg array
     public GameObject[] eggs;
 
-    private float v1Delay = 5, v2Delay = 1.5f;
+    private float v1Delay = 3, v2Delay = 1.5f;
     private bool v1Played = false, v2Played = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<BoxCollider>();
+        
     }
 
     // Update is called once per frame
@@ -46,16 +46,14 @@ public class egghuntHigh : MonoBehaviour
         for (int i = 0; i < eggs.Length; i++)
             if (collision.gameObject.Equals(eggs[i]))
             {
+                //Count towards challenge completion
                 challengeCount++;
-                Debug.Log("Pouch enter");
-
+                
                 //make sound/sfx
                 soundPlayer.PlayOneShot(onPickupNoise);
                 //disable gameobject
                 eggs[i].SetActive(false);
             }
-
-        Debug.Log("Collision enter");
     }
 
     /*
@@ -76,9 +74,10 @@ public class egghuntHigh : MonoBehaviour
 
     private void hunt()
     {
+        //update score text
         scoreText.SetText("Hidden Items Found " + challengeCount + "/5");
-
-
+        
+        //itterate timer for voicover
         if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
         else if (v1Delay <= 0 && !v1Played)
         {
@@ -93,13 +92,12 @@ public class egghuntHigh : MonoBehaviour
             {
                 v2Played = true;
                 //soundPlayer.PlayOneShot(voiceoverSound[2]);
-                  
+                
                 for (int i = 0; i < portals.Length; i++)
                 
                     //portal animation here Egguard
                     portals[i].SetActive(true);
             }
         }
-          
     }
 }
