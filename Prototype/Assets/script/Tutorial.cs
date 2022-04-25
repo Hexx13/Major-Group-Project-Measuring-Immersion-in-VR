@@ -120,7 +120,7 @@ public class Tutorial : MonoBehaviour
         else if (step1Delay <= 0 && !step1Played)
         {
             Debug.Log("Step 1 done");
-            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            tutorialPlayer.PlayOneShot(voiceoverSound[0]);
             step1Played = true;
         }
 
@@ -133,7 +133,7 @@ public class Tutorial : MonoBehaviour
             else if (step2Delay <= 0 && !step2Played)
             {
                 Debug.Log("Step 2 done");
-                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                tutorialPlayer.PlayOneShot(voiceoverSound[1]);
                 step2Played = true;
             }
         }
@@ -146,7 +146,7 @@ public class Tutorial : MonoBehaviour
             else if (step3Delay <= 0 && !step3Played)
             {
                 Debug.Log("Step 3 done");
-                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                tutorialPlayer.PlayOneShot(voiceoverSound[2]);
                 step3Played = true;
             }
         }
@@ -159,7 +159,7 @@ public class Tutorial : MonoBehaviour
             else if (step4Delay <= 0 && !step4Played)
             {
                 Debug.Log("Step 4 done");
-                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                tutorialPlayer.PlayOneShot(voiceoverSound[3]);
                 step4Played = true;
             }
         }
