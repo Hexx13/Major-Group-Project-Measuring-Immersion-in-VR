@@ -19,7 +19,7 @@ public class egghuntLow : MonoBehaviour
     public AudioClip pickupNoise;
     public AudioSource soundPlayer;
 
-    private float v1Delay = 5, v2Delay = 1.5f;
+    private float v1Delay = 2, v2Delay = 1.5f;
     private bool v1Played = false, v2Played = false;
 
     // easter egg array
