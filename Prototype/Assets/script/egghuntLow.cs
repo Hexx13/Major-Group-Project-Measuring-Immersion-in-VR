@@ -70,7 +70,7 @@ public class egghuntLow : MonoBehaviour
         {
             v1Played = true;
             Debug.Log("Audio 1");
-            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            soundPlayer.PlayOneShot(voiceoverSound[0]);
         }
         
         
@@ -81,7 +81,7 @@ public class egghuntLow : MonoBehaviour
             {
                 v2Played = true;
                 Debug.Log("Audio 2");
-                //soundPlayer.PlayOneShot(voiceoverSound[2]);
+                soundPlayer.PlayOneShot(voiceoverSound[1]);
             }
         }
     }
