@@ -17,16 +17,16 @@ public class Tutorial : MonoBehaviour
     
     
     private bool step2Played = false;
-    private float step2Delay = .5f;
+    private float step2Delay = 22f;
     public AudioClip step2Clip;
     
     
     private bool step3Played = false;
-    private float step3Delay = .5f;
+    private float step3Delay = 23f;
     public AudioClip step3Clip;
 
     private bool step4Played = false;
-    private float step4Delay = .5f;
+    private float step4Delay = 21f;
     public AudioClip step4Clip;
    
     

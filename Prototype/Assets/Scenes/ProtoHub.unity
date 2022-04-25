@@ -3981,7 +3981,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 752f1fad97d78c84f8b4cb4d9f22acec, type: 3}
   - {fileID: 8300000, guid: bf1ffe36e4e71d743a8d9495bba33257, type: 3}
   - {fileID: 8300000, guid: f6ce458b3d2cef740bc05ee2b4c5218a, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4f0027e1d44baa6468cd13446ca421ab, type: 3}
   tutorialPlayer: {fileID: 844689104}
   scoreText: {fileID: 0}
   xrCore: {fileID: 0}
