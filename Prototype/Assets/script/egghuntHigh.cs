@@ -49,9 +49,7 @@ public class egghuntHigh : MonoBehaviour
                 
                 //make sound/sfx
                 soundPlayer.PlayOneShot(onPickupNoise);
-                
-                // make particle effect
-                //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
+               
                 
                 //disable gameobject
                 eggs[i].SetActive(false);
@@ -85,7 +83,7 @@ public class egghuntHigh : MonoBehaviour
         else if (v1Delay <= 0 && !v1Played)
         {
             Debug.Log("Audio 1");
-            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            soundPlayer.PlayOneShot(voiceoverSound[0]);
             v1Played = true;
         }
         
@@ -96,7 +94,7 @@ public class egghuntHigh : MonoBehaviour
             {
                 v2Played = true;
                 Debug.Log("Audio 2");
-                //soundPlayer.PlayOneShot(voiceoverSound[2]);
+                soundPlayer.PlayOneShot(voiceoverSound[1]);
                 
             }
         }
