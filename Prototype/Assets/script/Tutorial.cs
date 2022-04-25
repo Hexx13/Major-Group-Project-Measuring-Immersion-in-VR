@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,30 @@ public class Tutorial : MonoBehaviour
 {
     private int challengeStatus = 0;
     private bool playerEnterCircle = false;
+    //public AudioClip startTutorialClip;
+
+    private bool step1Played = false;
+    private float step1Delay = 3f;
+    public AudioClip step1Clip;
+
+    
+    
+    private bool step2Played = false;
+    private float step2Delay = .5f;
+    public AudioClip step2Clip;
+    
+    
+    private bool step3Played = false;
+    private float step3Delay = .5f;
+    public AudioClip step3Clip;
+
+    private bool step4Played = false;
+    private float step4Delay = .5f;
+    public AudioClip step4Clip;
    
     
     private int challengeCount = 0;
-    public AudioClip startTutorialClip;
+    
 
     
     public AudioClip[] voiceoverSound;
@@ -35,33 +56,26 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //tutorial();
+        level();
     }
 
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Plaer") && playerEnterCircle==false)
-        {
-            playerEnterCircle = true;
-        }
-        else
-        {
-            for (int i = 0; i < challengePrefabs.Length; i++)
-                if (collision.gameObject.Equals(challengePrefabs[i]))
-                {
-                    //Count towards challenge completion
-                    challengeCount++;
-                
-                    //make sound/sfx
-                    // soundPlayer.PlayOneShot(onPickupNoise);
-                
-                    // make particle effect
-                    //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
-                }
-        }
-
        
+        for (int i = 0; i < challengePrefabs.Length; i++)
+            if (collision.gameObject.Equals(challengePrefabs[i]))
+            {
+                //Count towards challenge completion
+                challengeCount++;
+                
+                //make sound/sfx
+                // soundPlayer.PlayOneShot(onPickupNoise);
+                
+                // make particle effect
+                //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
+            }
+        
         Debug.Log("Collision enter");
     }
     private void OnTriggerExit(Collider collision)
@@ -92,17 +106,30 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    private void step1()
+    private void step(float delay, bool played, AudioClip audioClip)
     {
         //itterate timer for voicover
-        if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
-        else if (v1Delay <= 0 && !v1Played)
+        if (delay >= 0 && !played) v1Delay -= Time.deltaTime;
+        else if (v1Delay <= 0 && !played)
         {
-            Debug.Log("Audio 1");
             //soundPlayer.PlayOneShot(voiceoverSound[1]);
-            v1Played = true;
+            played = true;
         }
     }
+    
+    private void step(float delay, bool played, AudioClip audioClip, String debug)
+    {
+        //itterate timer for voicover
+        if (delay >= 0 && !played) v1Delay -= Time.deltaTime;
+        else if (v1Delay <= 0 && !played)
+        {
+            Debug.Log(debug);
+            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            played = true;
+        }
+    }
+    
+    
 
     private void step2()
     {
@@ -118,71 +145,44 @@ public class Tutorial : MonoBehaviour
             v2Played = true;
             Debug.Log("Audio 2");
             //soundPlayer.PlayOneShot(voiceoverSound[2]);
+            
+            //TODO make portal visible
         }
     }
 
     private void level()
     {
-        if (playerEnterCircle)
-        {
-            //update score text
-            scoreText.SetText("Hidden Items Found " + challengeCount + "/3");
+        //update score text
+        scoreText.SetText("Hidden Items Found " + challengeCount + "/3");
+            
+        step(step1Delay, step1Played, step1Clip, "Step1");
+        //Welcome them to experiment
+        //Warn them that they can leave at any time
+            
+        step(step2Delay, step1Played, step1Clip, "Step2");
+        //How to look around Voicover
+//             //How To move
+//             //how to jump
         
-        
-           
-            if (challengeCount >= 3) end();
-        }
-        else
-        {
-            start();
-        }
+        step(step3Delay, step1Played, step1Clip, "Step3");
+        //how to pick up things voice over
+            
+            
+        step(step4Delay, step1Played, step1Clip, "Step4");
+        //challenge them to put things in circle
+        if (challengeCount >= 3) end();
         
     }
 }
     
 
-    
-//
-//
-//     private void tutorial(){
-//         switch(challengeStatus){
-//             case 0:
-//                 challenge1();
-//                 if(playerLeftSpawn)challengeStatus++;
-//                 break;
-//         
-//             case 1:
-//                 challenge2();
-//                 challengeStatus++;
-//                 break;
-//                 //make unity wait a few seconds
-//
-//             case 2:
-//                 challenge3();
-//                 break;
-//         }
-//
-//
-//     }
 //
 //
 //
-//
-//     private void challenge1(){
-//         //intro voiceover
-//         tutorialPlayer.PlayOneShot(voiceoverSound[0]);
-//             //How to look around Voicover
-//             //How To move
-//             //how to jump
-//             
-//
-//         
-//
-//
-//     }
+
 //     private void challenge2(){
 //         tutorialPlayer.PlayOneShot(voiceoverSound[1]);
-//         //how to pick up things voice over
+//         
 //         
 //
 //     }
