@@ -10843,7 +10843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1503778655}
-  voiceoverSound: []
+  voiceoverSound:
+  - {fileID: 8300000, guid: 55d7160a6470fda439e8493e99bfce16, type: 3}
+  - {fileID: 8300000, guid: e7c88d78850f0c34db49d5733e59eacc, type: 3}
   pickupNoise: {fileID: 8300000, guid: 796540af0d619e740a0e259b023c2218, type: 3}
   soundPlayer: {fileID: 2131593465}
   eggs:

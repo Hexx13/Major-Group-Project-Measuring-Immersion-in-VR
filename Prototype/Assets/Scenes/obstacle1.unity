@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38479948, g: 0.4721464, b: 0.61834335, a: 1}
+  m_IndirectSpecularColor: {r: 0.3851593, g: 0.4724939, b: 0.6185859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6616,7 +6616,6 @@ GameObject:
   - component: {fileID: 951677006}
   - component: {fileID: 951677005}
   - component: {fileID: 951677004}
-  - component: {fileID: 951677003}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -6624,20 +6623,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &951677003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951677002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1317db4d6ff7645a5355cd2d625e08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
-  voiceoverSound: []
 --- !u!114 &951677004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6650,8 +6635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1317db4d6ff7645a5355cd2d625e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 0}
-  voiceoverSound: []
+  soundPlayer: {fileID: 4888337499060479423}
+  voiceoverSound:
+  - {fileID: 8300000, guid: 28ee356604dac2a43a6de87a2adb6696, type: 3}
+  - {fileID: 8300000, guid: 831f16746685f9e4d8dfa92fd8098291, type: 3}
 --- !u!65 &951677005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16249,3 +16236,8 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!82 &4888337499060479423 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8998687593355709103, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
+  m_PrefabInstance: {fileID: 4888337499060479419}
+  m_PrefabAsset: {fileID: 0}

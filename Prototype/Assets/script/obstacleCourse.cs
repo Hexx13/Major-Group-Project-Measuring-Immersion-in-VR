@@ -41,7 +41,7 @@ public class obstacleCourse : MonoBehaviour
         else if (v1Delay <= 0 && !v1Played)
         {
             Debug.Log("Audio 1");
-            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            soundPlayer.PlayOneShot(voiceoverSound[0]);
             v1Played = true;
         }
         
@@ -52,7 +52,7 @@ public class obstacleCourse : MonoBehaviour
             {
                 v2Played = true;
                 Debug.Log("Audio 2");
-                //soundPlayer.PlayOneShot(voiceoverSound[2]);
+                soundPlayer.PlayOneShot(voiceoverSound[1]);
                 
             }
         }
