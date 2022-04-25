@@ -52,8 +52,5 @@ public class EggObject : MonoBehaviour
     }
 
 
-    private void OnDestroy()
-    {
-        particleSystem.Play();
-    }
+    
 }

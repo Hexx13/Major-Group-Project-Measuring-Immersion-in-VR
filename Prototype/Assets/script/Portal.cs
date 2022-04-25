@@ -8,6 +8,7 @@ public class Portal : MonoBehaviour
     //scene number value for teleporter, set in editor
     public int sceneNumber;
 
+    public ParticleSystem particleEffect;
     //when the user collides with the portal they are sent to a different level
      void OnCollisionEnter(Collision collision)
     {

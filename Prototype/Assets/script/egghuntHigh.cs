@@ -24,7 +24,7 @@ public class egghuntHigh : MonoBehaviour
 
     // easter egg array
     public GameObject[] eggs;
-
+    public ParticleSystem[] eggParticleSystem;
     private float v1Delay = 3, v2Delay = 1.5f;
     private bool v1Played = false, v2Played = false;
 
@@ -51,6 +51,9 @@ public class egghuntHigh : MonoBehaviour
                 
                 //make sound/sfx
                 soundPlayer.PlayOneShot(onPickupNoise);
+                
+                // make particle effect
+                eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
                 //disable gameobject
                 eggs[i].SetActive(false);
             }
@@ -92,11 +95,14 @@ public class egghuntHigh : MonoBehaviour
             {
                 v2Played = true;
                 //soundPlayer.PlayOneShot(voiceoverSound[2]);
-                
+
                 for (int i = 0; i < portals.Length; i++)
-                
+                {
+
                     //portal animation here Egguard
                     portals[i].SetActive(true);
+                    portals[i].gameObject.GetComponent<ParticleSystem>().Play();
+                }
             }
         }
     }
