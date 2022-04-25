@@ -8,7 +8,7 @@ public class obstacleCourse : MonoBehaviour
     public AudioSource soundPlayer;
 
     private bool winCondition = false;
-    
+    public AudioClip[] voiceoverSound;
     private float v1Delay = 2, v2Delay = .5f;
     private bool v1Played = false, v2Played = false;
     
@@ -23,20 +23,16 @@ public class obstacleCourse : MonoBehaviour
         level();
     }
 
-
-   
-
+    
     private void OnTriggerEnter(Collider collision)
     {
-        
-            if (collision.gameObject.Equals())
-            {
-                winCondition = true;
-            }
+        if (collision.gameObject.CompareTag("Plaer"))
+        {
+            winCondition = true;
+        }
     }
 
-
-
+    
 
     private void level()
     {

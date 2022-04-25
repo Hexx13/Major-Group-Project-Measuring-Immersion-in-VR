@@ -845,35 +845,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9615d776614809e4890301d5377aeb9f, type: 3}
---- !u!1 &199271489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000013479777962, guid: 9615d776614809e4890301d5377aeb9f, type: 3}
-  m_PrefabInstance: {fileID: 199271487}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &199271490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199271489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2e266b247df914aad5cdd0e495d5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 306122298}
-  voiceoverSound: []
-  putDownNoise: {fileID: 8300000, guid: 61ef7f650bac4a241bdc62343293fd0d, type: 3}
-  onPickupNoise: {fileID: 8300000, guid: 796540af0d619e740a0e259b023c2218, type: 3}
-  soundPlayer: {fileID: 2131593465}
-  eggs:
-  - {fileID: 1533760142}
-  - {fileID: 1541835540}
-  - {fileID: 950576348}
-  - {fileID: 2062256424}
-  - {fileID: 2073381831}
-  eggParticleSystem: []
 --- !u!1001 &203444681
 PrefabInstance:
   m_ObjectHideFlags: 0
