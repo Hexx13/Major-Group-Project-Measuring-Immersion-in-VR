@@ -18,7 +18,6 @@ public class egghuntLow : MonoBehaviour
     public AudioClip[] voiceoverSound;
     public AudioClip pickupNoise;
     public AudioSource soundPlayer;
-    public GameObject[] portals;
 
     private float v1Delay = 5, v2Delay = 1.5f;
     private bool v1Played = false, v2Played = false;
@@ -64,27 +63,24 @@ public class egghuntLow : MonoBehaviour
     private void hunt()
     {
         scoreText.SetText("Hidden Items Found " + challengeCount + "/5");
-
-
+        
         if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
         else if (v1Delay <= 0 && !v1Played)
         {
             v1Played = true;
-            soundPlayer.PlayOneShot(voiceoverSound[1]);
+            Debug.Log("Audio 1");
+            //soundPlayer.PlayOneShot(voiceoverSound[1]);
         }
-
-
+        
+        
         if (challengeCount >= 5)
         {
-            for (int i = 0; i < portals.Length; i++)
-                //portal animation here Egguard
-                portals[i].SetActive(true);
-
             if (v2Delay >= 0 && !v2Played) v2Delay -= Time.deltaTime;
             else if (v2Delay <= 0 && !v2Played)
             {
                 v2Played = true;
-                soundPlayer.PlayOneShot(voiceoverSound[2]);
+                Debug.Log("Audio 2");
+                //soundPlayer.PlayOneShot(voiceoverSound[2]);
             }
         }
     }
