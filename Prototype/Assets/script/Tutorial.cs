@@ -6,27 +6,23 @@ using TMPro;
 public class Tutorial : MonoBehaviour
 {
     private int challengeStatus = 0;
-    private bool playerLeftSpawn = false;
+    private bool playerEnterCircle = false;
+   
+    
     private int challengeCount = 0;
 
-    //Step 1 - Run Voicover for introduction
-    //  Step 2.1 - Introduce movement
-    //      Step 2.1.1 - Run Voiceover for movement
-    //      Step 2.1.2 - Confirm Movement
-    //      Step 2.1.3 - Introduce Jump
-    //  Step 2.2 - Introduce Looking around voiceover
-    //Step 3 - Introduce Hand interaction
-    //  Step 3.1 - Run voiceover for Hand interaction
-    //Challenge 
-    //  Run voiceover for challenge
-    //  collect items and confirm
-    //  reveal portal
+
+    
+    public AudioClip[] voiceoverSound;
+    public AudioSource tutorialPlayer;
+    
+    
+    private float v1Delay = 2, v2Delay = 1.5f;
+    private bool v1Played = false, v2Played = false;
     
 
     public TextMeshPro scoreText;
     public GameObject xrCore;
-    public AudioClip[] voiceoverSound;
-    public AudioSource tutorialPlayer;
     public GameObject [] portals;
     public GameObject [] challengePrefabs;
     private BoxCollider collider;
@@ -45,86 +41,132 @@ public class Tutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-
-        if(collision.gameObject.Equals(challengePrefabs[0])){
-            challengeCount++;
-            Debug.Log("Pouch enter");
-        }else if(collision.gameObject.Equals(challengePrefabs[1])){
-            challengeCount++;
-            Debug.Log("Red Shroom enter");
-        }else if(collision.gameObject.Equals(challengePrefabs[2])){
-            challengeCount++;
-            Debug.Log("Purple Shroom enter");
+        if (collision.gameObject.CompareTag("Plaer"))
+        {
         }
+        else
+        {
+            for (int i = 0; i < challengePrefabs.Length; i++)
+                if (collision.gameObject.Equals(challengePrefabs[i]))
+                {
+                    //Count towards challenge completion
+                    challengeCount++;
+                
+                    //make sound/sfx
+                    // soundPlayer.PlayOneShot(onPickupNoise);
+                
+                    // make particle effect
+                    //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
+                }
+        }
+
+       
         Debug.Log("Collision enter");
     }
     private void OnTriggerExit(Collider collision)
     {
-        if(collision.gameObject.CompareTag("Plaer"))Debug.Log("player left spawn");//playerLeftSpawn = true;
+        for (int i = 0; i < challengePrefabs.Length; i++)
+            if (collision.gameObject.Equals(challengePrefabs[i]))
+            {
+                //Count towards challenge completion
+                challengeCount--;
+                
+                //make sound/sfx
+                // soundPlayer.PlayOneShot(onPickupNoise);
+                
+                // make particle effect
+                //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
+            }
+    }
+    
+    
+    
+    private void level()
+    {
+        if (playerEnterCircle)
+        {
+            //update score text
+            scoreText.SetText("Hidden Items Found " + challengeCount + "/3");
         
-
-        if(collision.gameObject.Equals(challengePrefabs[0])){
-            challengeCount--;
-            Debug.Log("Pouch exit");
-        }else if(collision.gameObject.Equals(challengePrefabs[1])){
-            challengeCount--;
-            Debug.Log("Red Shroom exit");
-        }else if(collision.gameObject.Equals(challengePrefabs[2])){
-            challengeCount--;
-            Debug.Log("Purple Shroom exit");
+        
+            //itterate timer for voicover
+            if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
+            else if (v1Delay <= 0 && !v1Played)
+            {
+                Debug.Log("Audio 1");
+                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                v1Played = true;
+            }
+        
+            if (challengeCount >= 5)
+            {
+                if (v2Delay >= 0 && !v2Played) v2Delay -= Time.deltaTime;
+                else if (v2Delay <= 0 && !v2Played)
+                {
+                    v2Played = true;
+                    Debug.Log("Audio 2");
+                    //soundPlayer.PlayOneShot(voiceoverSound[2]);
+                
+                }
+            }
         }
-        Debug.Log("Collision eexit");
-    }
-
-
-    private void tutorial(){
-        switch(challengeStatus){
-            case 0:
-                challenge1();
-                if(playerLeftSpawn)challengeStatus++;
-                break;
-        
-            case 1:
-                challenge2();
-                challengeStatus++;
-                break;
-                //make unity wait a few seconds
-
-            case 2:
-                challenge3();
-                break;
-        }
-
-
-    }
-
-
-
-
-    private void challenge1(){
-        //intro voiceover
-        tutorialPlayer.PlayOneShot(voiceoverSound[0]);
-            //How to look around Voicover
-            //How To move
-            //how to jump
-            
 
         
-
-
-    }
-    private void challenge2(){
-        tutorialPlayer.PlayOneShot(voiceoverSound[1]);
-        //how to pick up things voice over
-        
-
-    }
-    private void challenge3(){
-        tutorialPlayer.PlayOneShot(voiceoverSound[2]);
-        scoreText.SetText("Items Collected " + challengeCount + "/3");
-        if(challengeCount >= 3){
-            for(int i = 0; i < portals.Length; i++)
-            portals[i].SetActive(true);
-        }
     }
 }
+    
+
+    
+//
+//
+//     private void tutorial(){
+//         switch(challengeStatus){
+//             case 0:
+//                 challenge1();
+//                 if(playerLeftSpawn)challengeStatus++;
+//                 break;
+//         
+//             case 1:
+//                 challenge2();
+//                 challengeStatus++;
+//                 break;
+//                 //make unity wait a few seconds
+//
+//             case 2:
+//                 challenge3();
+//                 break;
+//         }
+//
+//
+//     }
+//
+//
+//
+//
+//     private void challenge1(){
+//         //intro voiceover
+//         tutorialPlayer.PlayOneShot(voiceoverSound[0]);
+//             //How to look around Voicover
+//             //How To move
+//             //how to jump
+//             
+//
+//         
+//
+//
+//     }
+//     private void challenge2(){
+//         tutorialPlayer.PlayOneShot(voiceoverSound[1]);
+//         //how to pick up things voice over
+//         
+//
+//     }
+//     private void challenge3(){
+//         tutorialPlayer.PlayOneShot(voiceoverSound[2]);
+//         scoreText.SetText("Items Collected " + challengeCount + "/3");
+//         if(challengeCount >= 3){
+//             for(int i = 0; i < portals.Length; i++)
+//             portals[i].SetActive(true);
+//         }
+//     }
+// }
