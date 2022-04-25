@@ -10,13 +10,13 @@ public class Tutorial : MonoBehaviour
    
     
     private int challengeCount = 0;
-
+    public AudioClip startTutorialClip;
 
     
     public AudioClip[] voiceoverSound;
     public AudioSource tutorialPlayer;
-    
-    
+
+    private float startTutorialTimer = 5;
     private float v1Delay = 2, v2Delay = 1.5f;
     private bool v1Played = false, v2Played = false;
     
@@ -41,8 +41,9 @@ public class Tutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Plaer"))
+        if (collision.gameObject.CompareTag("Plaer") && playerEnterCircle==false)
         {
+            playerEnterCircle = true;
         }
         else
         {
@@ -78,9 +79,48 @@ public class Tutorial : MonoBehaviour
                 //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
             }
     }
-    
-    
-    
+
+    private void start()
+    {
+        //play sound on loop
+        if (startTutorialTimer >= 0) startTutorialTimer -= Time.deltaTime;
+        else
+        {
+            //soundPlayer.PlayOneShot(startTutorialClip);
+            startTutorialTimer = 6f;
+            Debug.Log("Please Enter the stone Circle in front of you when you are ready to start the tutorial");
+        }
+    }
+
+    private void step1()
+    {
+        //itterate timer for voicover
+        if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
+        else if (v1Delay <= 0 && !v1Played)
+        {
+            Debug.Log("Audio 1");
+            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            v1Played = true;
+        }
+    }
+
+    private void step2()
+    {
+        
+    }
+    private void step3(){}
+
+    private void end()
+    {
+        if (v2Delay >= 0 && !v2Played) v2Delay -= Time.deltaTime;
+        else if (v2Delay <= 0 && !v2Played)
+        {
+            v2Played = true;
+            Debug.Log("Audio 2");
+            //soundPlayer.PlayOneShot(voiceoverSound[2]);
+        }
+    }
+
     private void level()
     {
         if (playerEnterCircle)
@@ -89,32 +129,13 @@ public class Tutorial : MonoBehaviour
             scoreText.SetText("Hidden Items Found " + challengeCount + "/3");
         
         
-            //itterate timer for voicover
-            if (v1Delay >= 0 && !v1Played) v1Delay -= Time.deltaTime;
-            else if (v1Delay <= 0 && !v1Played)
-            {
-                Debug.Log("Audio 1");
-                //soundPlayer.PlayOneShot(voiceoverSound[1]);
-                v1Played = true;
-            }
-        
-            if (challengeCount >= 5)
-            {
-                if (v2Delay >= 0 && !v2Played) v2Delay -= Time.deltaTime;
-                else if (v2Delay <= 0 && !v2Played)
-                {
-                    v2Played = true;
-                    Debug.Log("Audio 2");
-                    //soundPlayer.PlayOneShot(voiceoverSound[2]);
-                
-                }
-            }
+           
+            if (challengeCount >= 3) end();
         }
         else
         {
-            
+            start();
         }
-        
         
     }
 }
