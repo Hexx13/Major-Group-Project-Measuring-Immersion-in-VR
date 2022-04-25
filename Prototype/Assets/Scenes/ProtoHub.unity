@@ -3973,6 +3973,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada3888379f4e894dbc3e7720e8014d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  step1Clip: {fileID: 0}
+  step2Clip: {fileID: 0}
+  step3Clip: {fileID: 0}
+  step4Clip: {fileID: 0}
   voiceoverSound:
   - {fileID: 0}
   - {fileID: 0}
@@ -4789,11 +4793,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.69
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.03
+      value: -0.035
       objectReference: {fileID: 0}
     - target: {fileID: 6341450118934854607, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_LocalRotation.w

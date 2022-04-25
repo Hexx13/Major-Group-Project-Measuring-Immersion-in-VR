@@ -93,50 +93,7 @@ public class Tutorial : MonoBehaviour
                 //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
             }
     }
-
-    private void start()
-    {
-        //play sound on loop
-        if (startTutorialTimer >= 0) startTutorialTimer -= Time.deltaTime;
-        else
-        {
-            //soundPlayer.PlayOneShot(startTutorialClip);
-            startTutorialTimer = 6f;
-            Debug.Log("Please Enter the stone Circle in front of you when you are ready to start the tutorial");
-        }
-    }
-
-    private void step(float delay, bool played, AudioClip audioClip)
-    {
-        //itterate timer for voicover
-        if (delay >= 0 && !played) v1Delay -= Time.deltaTime;
-        else if (v1Delay <= 0 && !played)
-        {
-            //soundPlayer.PlayOneShot(voiceoverSound[1]);
-            played = true;
-        }
-    }
     
-    private void step(float delay, bool played, AudioClip audioClip, String debug)
-    {
-        //itterate timer for voicover
-        if (delay >= 0 && !played) v1Delay -= Time.deltaTime;
-        else if (v1Delay <= 0 && !played)
-        {
-            Debug.Log(debug);
-            //soundPlayer.PlayOneShot(voiceoverSound[1]);
-            played = true;
-        }
-    }
-    
-    
-
-    private void step2()
-    {
-        
-    }
-    private void step3(){}
-
     private void end()
     {
         if (v2Delay >= 0 && !v2Played) v2Delay -= Time.deltaTime;
@@ -153,45 +110,61 @@ public class Tutorial : MonoBehaviour
     private void level()
     {
         //update score text
-        scoreText.SetText("Hidden Items Found " + challengeCount + "/3");
-            
-        step(step1Delay, step1Played, step1Clip, "Step1");
+        // scoreText.SetText("Hidden Items Found " + challengeCount + "/3");
+        // Debug.Log("Hidden Items Found " + challengeCount + "/3");
+        
+        
         //Welcome them to experiment
         //Warn them that they can leave at any time
-            
-        step(step2Delay, step1Played, step1Clip, "Step2");
+        if (step1Delay >= 0 && !step1Played) step1Delay-= Time.deltaTime;
+        else if (step1Delay <= 0 && !step1Played)
+        {
+            Debug.Log("Step 1 done");
+            //soundPlayer.PlayOneShot(voiceoverSound[1]);
+            step1Played = true;
+        }
+
         //How to look around Voicover
-//             //How To move
-//             //how to jump
+            //How To move
+             //how to jump
+        if (step1Played)
+        {
+            if (step2Delay >= 0 && !step2Played) step2Delay -= Time.deltaTime;
+            else if (step2Delay <= 0 && !step2Played)
+            {
+                Debug.Log("Step 2 done");
+                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                step2Played = true;
+            }
+        }
         
-        step(step3Delay, step1Played, step1Clip, "Step3");
+        
         //how to pick up things voice over
-            
-            
-        step(step4Delay, step1Played, step1Clip, "Step4");
+        if (step2Played)
+        {
+            if (step3Delay >= 0 && !step3Played) step3Delay -= Time.deltaTime;
+            else if (step3Delay <= 0 && !step3Played)
+            {
+                Debug.Log("Step 3 done");
+                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                step3Played = true;
+            }
+        }
+        
+        
         //challenge them to put things in circle
+        if (step3Played)
+        {
+            if (step4Delay >= 0 && !step4Played) step4Delay -= Time.deltaTime;
+            else if (step4Delay <= 0 && !step4Played)
+            {
+                Debug.Log("Step 4 done");
+                //soundPlayer.PlayOneShot(voiceoverSound[1]);
+                step4Played = true;
+            }
+        }
+        
         if (challengeCount >= 3) end();
         
     }
 }
-    
-
-//
-//
-//
-
-//     private void challenge2(){
-//         tutorialPlayer.PlayOneShot(voiceoverSound[1]);
-//         
-//         
-//
-//     }
-//     private void challenge3(){
-//         tutorialPlayer.PlayOneShot(voiceoverSound[2]);
-//         scoreText.SetText("Items Collected " + challengeCount + "/3");
-//         if(challengeCount >= 3){
-//             for(int i = 0; i < portals.Length; i++)
-//             portals[i].SetActive(true);
-//         }
-//     }
-// }
