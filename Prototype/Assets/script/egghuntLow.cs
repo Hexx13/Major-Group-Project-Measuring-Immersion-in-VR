@@ -10,6 +10,7 @@ public class egghuntLow : MonoBehaviour
     private int challengeStatus = 0;
     private bool playerLeftSpawn = false;
     private int challengeCount = 0;
+    
 
 
     //old code from tutorial

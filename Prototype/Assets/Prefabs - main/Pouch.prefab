@@ -366,4 +366,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPlayer: {fileID: 6954392345288714790}
   ambience: {fileID: 8300000, guid: 4eec1763489c0364daca312cf85e70b4, type: 3}
+  particleSystem: {fileID: 19861012, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
   onPickup: {fileID: 8300000, guid: 796540af0d619e740a0e259b023c2218, type: 3}

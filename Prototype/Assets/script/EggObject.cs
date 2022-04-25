@@ -8,6 +8,7 @@ public class EggObject : MonoBehaviour
     public AudioSource objectPlayer;
     private float timer = 5;
     public AudioClip ambience;
+    public ParticleSystem particleSystem;
 
     public AudioClip onPickup;
     // Start is called before the first frame update
@@ -49,6 +50,10 @@ public class EggObject : MonoBehaviour
             objectPlayer.PlayOneShot(ambience);
         }
     }
-    
-   
+
+
+    private void OnDestroy()
+    {
+        particleSystem.Play();
+    }
 }
