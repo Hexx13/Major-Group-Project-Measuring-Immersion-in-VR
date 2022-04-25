@@ -51,9 +51,11 @@ public class egghuntHigh : MonoBehaviour
                 soundPlayer.PlayOneShot(onPickupNoise);
                 
                 // make particle effect
-                eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
+                //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
+                
                 //disable gameobject
                 eggs[i].SetActive(false);
+                
             }
     }
 
