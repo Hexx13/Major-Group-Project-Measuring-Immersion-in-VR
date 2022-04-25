@@ -122,26 +122,26 @@ public class PlayerController : MonoBehaviour
          {
              //play sound
              audioPlayer.volume = Random.Range(.5f, .8f);
-             audioPlayer.pitch = Random.Range(.5f, .8f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
              
              audioPlayer.PlayOneShot(footsteps[2]);
          }
          else if (_onGrass && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              audioPlayer.volume = Random.Range(.5f, .8f);
-             audioPlayer.pitch = Random.Range(.5f, .8f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
              audioPlayer.PlayOneShot(footsteps[1]);
          }
          else if (_onMud && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              audioPlayer.volume = Random.Range(.5f, .8f);
-             audioPlayer.pitch = Random.Range(.5f, .8f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
              audioPlayer.PlayOneShot(footsteps[0]);
          }
          else if (_onfloor && _isGrounded && audioPlayer.isPlaying == false && isMoving())
          {
              audioPlayer.volume = Random.Range(.5f, .8f);
-             audioPlayer.pitch = Random.Range(.5f, .8f);
+             audioPlayer.pitch = Random.Range(.8f, 1f);
              audioPlayer.PlayOneShot(footsteps[4]);
          }
 
