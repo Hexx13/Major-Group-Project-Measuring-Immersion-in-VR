@@ -18,7 +18,7 @@ public class egghuntLow : MonoBehaviour
     public AudioClip[] voiceoverSound;
     public AudioClip pickupNoise;
     public AudioSource soundPlayer;
-
+  
     private float v1Delay = 2, v2Delay = 1.5f;
     private bool v1Played = false, v2Played = false;
 
@@ -28,6 +28,7 @@ public class egghuntLow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class egghuntLow : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         for (int i = 0; i < eggs.Length; i++)
             if (collision.gameObject.Equals(eggs[i]))

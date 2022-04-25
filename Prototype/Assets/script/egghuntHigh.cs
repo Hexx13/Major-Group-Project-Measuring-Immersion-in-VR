@@ -18,7 +18,7 @@ public class egghuntHigh : MonoBehaviour
     public AudioClip putDownNoise;
     public AudioClip onPickupNoise;
     public AudioSource soundPlayer;
-    
+    public BoxCollider handCollider1;
 
     // easter egg array
     public GameObject[] eggs;
