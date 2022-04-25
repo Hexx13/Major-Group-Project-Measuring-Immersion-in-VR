@@ -110,7 +110,11 @@ public class Tutorial : MonoBehaviour
                 }
             }
         }
-
+        else
+        {
+            
+        }
+        
         
     }
 }
