@@ -6,6 +6,8 @@ using TMPro;
 
 public class Tutorial : MonoBehaviour
 {
+    public GameObject portal;
+    
     private int challengeStatus = 0;
     private bool playerEnterCircle = false;
     //public AudioClip startTutorialClip;
@@ -69,14 +71,14 @@ public class Tutorial : MonoBehaviour
                 //Count towards challenge completion
                 challengeCount++;
                 
+                Debug.Log("pouch in" + challengeCount);
+                
                 //make sound/sfx
                 // soundPlayer.PlayOneShot(onPickupNoise);
                 
                 // make particle effect
                 //eggs[i].gameObject.GetComponent<ParticleSystem>().Play();
             }
-        
-        Debug.Log("Collision enter");
     }
     private void OnTriggerExit(Collider collision)
     {
@@ -85,6 +87,8 @@ public class Tutorial : MonoBehaviour
             {
                 //Count towards challenge completion
                 challengeCount--;
+                
+                Debug.Log("pouch out" + challengeCount);
                 
                 //make sound/sfx
                 // soundPlayer.PlayOneShot(onPickupNoise);
@@ -103,7 +107,7 @@ public class Tutorial : MonoBehaviour
             Debug.Log("Audio 2");
             tutorialPlayer.PlayOneShot(voiceoverSound[4]);
             
-            //TODO make portal visible
+            portal.SetActive(true);
         }
     }
 
