@@ -101,7 +101,7 @@ public class Tutorial : MonoBehaviour
         {
             v2Played = true;
             Debug.Log("Audio 2");
-            //soundPlayer.PlayOneShot(voiceoverSound[2]);
+            tutorialPlayer.PlayOneShot(voiceoverSound[4]);
             
             //TODO make portal visible
         }
