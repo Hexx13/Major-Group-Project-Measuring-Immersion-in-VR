@@ -13949,11 +13949,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 73eaa673306e9df42ba5133af90c9484, type: 3}
     - target: {fileID: 4888337498724724685, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_CameraYOffset
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4888337498724724685, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4888337499716421832, guid: 7260526c2353b5d4db663ce5dada83e3, type: 3}
       propertyPath: far clip plane
