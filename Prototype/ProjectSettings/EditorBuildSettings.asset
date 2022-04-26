@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/obstacle1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/RealScene - high inter 1.unity
+    guid: 41f12b82e57796d4782817773617ddc2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6fe5588dc47a6ae4a85154747adb278e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4ad5aead190d6ba4886a54357099b7e0, type: 2}
